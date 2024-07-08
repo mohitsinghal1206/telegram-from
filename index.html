@@ -4,115 +4,165 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>bullish bros</title>
-  </head>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
-    rel="stylesheet"
-  />
-  <link rel="stylesheet" href="css/style.css" />
-  <style>
-    body {
-      font-family: "Oswald", sans-serif;
-      color: #F44336;
-    margin: 0px;
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Oswald", sans-serif;
+        color: #f44336;
+        margin: 0;
+        padding: 0;
+        background: url("image/stock-market-2616931.jpg") no-repeat center center fixed;
+        background-size: cover;
+      }
+      .left {
+        display: inline-block;
+        position: absolute;
+        left: 20px;
+        top: 20px;
+      }
+      .left img {
+        width: 100px;
+        filter: invert(900%);
+      }
+      .left div {
+        line-height: 19px;
+        font-size: 16px;
+        text-align: center;
+      }
+      .mid {
+        display: block;
+        width: 90%;
+        margin: 29px auto;
+        text-align: center;
+      }
+      .right {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        display: inline-block;
+      }
+      .navbar {
+        display: inline-block;
+        text-align: center;
+      }
+      .navbar li {
+        display: inline-block;
+        font-size: 20px;
+      }
+      .navbar li a {
+        color: white;
+        text-decoration: none;
+        padding: 10px 10px;
+      }
+      .navbar li a:hover,
+      .navbar li a.active {
+        text-decoration: underline;
+        color: white;
+      }
+      .btn {
+        font-family: "Oswald", sans-serif;
+        color: white;
+        margin: 5px 9px;
+        background-color: black;
+        padding: 5px 14px;
+        border: 2px solid grey;
+        border-radius: 10px;
+        font-size: 18px;
+        cursor: pointer;
+      }
+      .btn:hover {
+        background-color: blueviolet;
+      }
+      .container {
+        border: 2px solid red;
+        margin: 79px auto;
+        padding: 40px;
+        width: 90%;
+        border-radius: 29px;
+        background-color: rgba(255, 255, 255, 0.8);
+      }
+      .form-group input {
+        font-family: "Oswald", sans-serif;
+        text-align: center;
+        display: block;
+        width: 100%;
+        padding: 10px;
+        border: 2px solid black;
+        margin: 11px auto;
+        font-size: 18px;
+        border-radius: 8px;
+      }
+      .container h1 {
+        text-align: center;
+      }
+      .container button {
+        display: block;
+        width: 90%;
+        margin: 20px auto;
+      }
 
-      margin: 0px;
-      padding: 0px;
-      background: url("image/stock-market-2616931.jpg");
-    }
-    .left {
-      display: inline-block;
-      /*border: 2px solid red;*/
-      position: absolute;
-      left: 60px;
-      top: 20px;
-    }
-    .left img {
-      width: 136px;
-      filter: invert(900%);
-    }
-    .left div {
-      line-height: 19px;
-      font-size: 16px;
-      text-align: center;
-    }
-    .mid {
-      display: block;
-      width: 45%;
-      margin: 29px auto;
-      /*border: 2px solid green;*/
-    }
-    .right {
-      position: absolute;
-      right: 34px;
-      top: 43px;
-      display: inline-block;
-      /*border: 2px solid yellow;*/
-    }
-    .navbar {
-      display: inline-block;
-    }
-    .navbar li {
-      display: inline-block;
-      font-size: 25px;
-    }
-    .navbar li a {
-      color: white;
-      text-decoration: none;
-      padding: 34px 23px;
-    }
-    .navbar li a:hover,
-    .navbar li a.active {
-      text-decoration: underline;
-      color: white;
-    }
-    .btn {
-      font-family: "Oswald", sans-serif;
-      color: white;
-      margin: 0px 9px;
-      background-color: black;
-      color: white;
-      padding: 4px 14px;
-      border: 2px solid grey;
-      border-radius: 10px;
-      font-size: 20px;
-      cursor: pointer;
-    }
-    .btn:hover {
-      background-color: blueviolet;
-      
-    }
-    .container {
-    border: 2px solid red;
-    margin: 79px 281px;
-    padding: 71px;
-    width: 54%;
-    border-radius: 29px;
-    
-    }
-    .form-group input {
-      font-family: "Oswald", sans-serif;
-      text-align: center;
-      display: block;
-      width: 508x;
-      padding: 1px;
-      border: 2px solid black;
-      margin: 11px auto;
-      font-size: 25px;
-      border-radius: 8px;
-      
-    }
-    
-    .container h1 {
-      text-align: center;
-    }
-    .container button {
-      display: block;
-      width: 74%;
-      margin: 20px auto;
-      
-    }
-  </style>
+      /* Media Queries for Responsiveness */
+      @media (max-width: 768px) {
+        .mid {
+          width: 90%;
+        }
+        .navbar li a {
+          padding: 10px 15px;
+          font-size: 18px;
+        }
+        .container {
+          width: 90%;
+          padding: 30px;
+        }
+        .form-group input {
+          font-size: 18px;
+        }
+      }
+      @media (max-width: 480px) {
+        .left {
+          left: 10px;
+          top: 10px;
+        }
+        .left img {
+          width: 80px;
+        }
+        .mid {
+          width: 90%;
+        }
+        .right {
+          top: 10px;
+          right: 10px;
+        }
+        .navbar {
+          display: block;
+          text-align: center;
+        }
+        .navbar li {
+          display: block;
+          margin: 5px 0;
+        }
+        .navbar li a {
+          padding: 5px 0;
+          font-size: 16px;
+        }
+        .container {
+          width: 90%;
+          padding: 20px;
+          margin: 20px auto;
+        }
+        .form-group input {
+          font-size: 16px;
+        }
+        .btn {
+          margin: 5px 0;
+          font-size: 16px;
+        }
+      }
+    </style>
+  </head>
   <body>
     <header class="header">
       <div class="left">
@@ -135,7 +185,7 @@
 
     <div class="container">
       <h1>Join the Best Telegram Group Now!!</h1>
-      <form action="#" method="POST"></form>
+      <form action="#" method="POST">
         <div class="form-group">
           <input type="text" name="" placeholder="Name" />
         </div>
@@ -146,9 +196,9 @@
           <input type="text" name="" placeholder="Referral Code(if any)" />
         </div>
         <div class="form-group">
-          <input type="text" name="" placeholder="Preffered Stock Broker" />
+          <input type="text" name="" placeholder="Preferred Stock Broker" />
         </div>
-        <a href="https://t.me/bullishbros" target="_blank"><button class="btn">Submit</button>
+        <button class="btn">Submit</button>
       </form>
     </div>
   </body>
